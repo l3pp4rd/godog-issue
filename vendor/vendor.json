@@ -1,0 +1,21 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "xiIneQpbxZQ+7YqN41jeHs44v1E=",
+			"path": "github.com/DATA-DOG/godog",
+			"revision": "5a17900dba10e5b138b00289c5168caeff321742",
+			"revisionTime": "2016-06-15T19:15:33Z",
+			"version": "v0.5.0",
+			"versionExact": "v0.5.0"
+		},
+		{
+			"checksumSHA1": "LCu7pjQ5nMZ505XwUU7tQQ1hBuM=",
+			"path": "github.com/DATA-DOG/godog/gherkin",
+			"revision": "abc6b65c1cecb69dda766cd8a8b9ecd8a19f21b7",
+			"revisionTime": "2016-06-16T09:01:58Z"
+		}
+	],
+	"rootPath": "github.com/nightlyone/godog-issue"
+}
