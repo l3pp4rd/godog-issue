@@ -1,5 +1,5 @@
 // Example - demonstrates REST API server implementation tests.
-package main
+package api
 
 import (
 	"encoding/json"
@@ -9,7 +9,7 @@ import (
 	"github.com/DATA-DOG/godog"
 )
 
-func getVersion(w http.ResponseWriter, r *http.Request) {
+func GetVersion(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		fail(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
@@ -19,11 +19,6 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 	}{Version: godog.Version}
 
 	ok(w, data)
-}
-
-func main() {
-	http.HandleFunc("/version", getVersion)
-	http.ListenAndServe(":8080", nil)
 }
 
 // fail writes a json response with error msg and status header

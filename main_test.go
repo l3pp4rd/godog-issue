@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"project/api"
 
 	"github.com/DATA-DOG/godog"
 	"github.com/DATA-DOG/godog/gherkin"
@@ -37,7 +38,7 @@ func (a *apiFeature) iSendrequestTo(method, endpoint string) (err error) {
 
 	switch endpoint {
 	case "/version":
-		getVersion(a.resp, req)
+		api.GetVersion(a.resp, req)
 	default:
 		err = fmt.Errorf("unknown endpoint: %s", endpoint)
 	}
